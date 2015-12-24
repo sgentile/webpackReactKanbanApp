@@ -19,11 +19,16 @@ var common = {
     path: PATHS.build,
     filename: 'bundle.js'
   },*/
+  // Add resolve.extensions. '' is needed to allow imports an extension
+  // Note the .'s before extensions!!! Without those matching will fail
+  resolve:{
+	extensions: ['', '.js', '.jsx']
+  },
   module: {
     loaders: [
       {
         test: /\.css$/,
-        loaders: ['style', 'css'],
+        loaders: ['babel', 'style', 'css'],
         include: PATHS.app
       }
     ]

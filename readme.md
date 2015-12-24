@@ -48,4 +48,18 @@ npm i webpack-merge --save-dev   <-- custom merge function that concats arrays a
 
 https://blog.jetbrains.com/webstorm/2015/09/debugging-webpack-applications-in-webstorm/
 
+# Webpack and React...
+
+http://survivejs.com/webpack_react/webpack_and_react/
+
+## Setting up Babel
+
+Configure the babel-loader
+
+npm i babel-loader@5.x --save-dev
+
+# Installing React - creating the first React View
+
+npm i react react-dom --save
+
 
