@@ -62,4 +62,8 @@ npm i babel-loader@5.x --save-dev
 
 npm i react react-dom --save
 
+# Activate Hot Loading for Development
+
+npm i babel-plugin-react-transform react-transform-hmr --save-dev
+
 
