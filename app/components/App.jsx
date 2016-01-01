@@ -34,7 +34,7 @@ export default class App extends React.Component {
 		return (
             <div>
                 <button className="add-note" onClick={this.addNote}>+</button>
-			    <Notes notes={notes} />
+			    <Notes notes={notes} onEdit={this.editNote} />
             </div>
 		);
 	}
@@ -52,5 +52,17 @@ export default class App extends React.Component {
         You could use [...this.state.notes, {id: uuid.v4(), task: 'New task'}] to achieve the same result. 
         This spread operator can be used with function parameters as well.
         */
+    }
+    
+    editNote = (id, task) => {
+        const notes = this.state.notes.map((note) => {
+            if(note.id === id) {
+                note.task = task;
+            }
+            
+            return note;
+        });
+        
+        this.setState({notes});
     }
 }
